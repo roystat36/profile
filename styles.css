@@ -1,0 +1,150 @@
+/* Reset margin, padding, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Style the header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Basic styling for the menu */
+nav {
+    background-color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+/* Change background color of the current (active) menu item */
+.menu li a.active {
+    color: #e91e63;
+    border-bottom: 2px solid #e91e63;
+}
+
+.menu li a:hover {
+    color: #e91e63;
+}
+
+.name {
+    text-align: center;
+    margin: 20px auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e91e63;
+    padding-bottom: 10px;
+    text-align: left;
+    max-width: 800px;
+    margin-left: 200px;
+}
+
+/* Layout for main content: two-column layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Left column for text content */
+.left-column {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+}
+
+.intro a {
+    color: #d63384;
+    text-decoration: none;
+}
+
+.intro a:hover {
+    text-decoration: underline;
+}
+
+/* Right column for profile picture */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.contact {
+    font-size: 1em;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* Social media icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}

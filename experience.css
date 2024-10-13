@@ -1,0 +1,110 @@
+/* Reset margin, padding, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Style the header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Basic styling for the menu */
+nav {
+    background-color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    display: flex; /* Use flexbox */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+/* Change background color of the current (active) menu item */
+.menu li a.active {
+    color: #e91e63;
+    border-bottom: 2px solid #e91e63;
+}
+
+.menu li a:hover {
+    color: #e91e63;
+}
+
+/* Main section */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Education section */
+.experience h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e91e63;
+    padding-bottom: 10px;
+}
+
+.experience-details {
+    margin-bottom: 20px;
+}
+
+.experience-details h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.experience-details p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.experience-details ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
