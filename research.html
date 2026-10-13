@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | Roy</title>
     <link rel="stylesheet" href="research.css">
+    <link rel="stylesheet" href="interactive.css">
     <link rel="icon" href="cv.png" type="image">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){}</script>
 </head>
-<body>
+<body class="page-research">
         <nav>
             <ul class="menu">
                 <li><a href="./">Sourav Roy</a></li>
                 <li><a href="./">About</a></li>
-                <li><a href="./education">Education</a></li>
-                <li><a href="./experience">Experience</a></li>
-                <li><a href="./award">Awards</a></li>
-                <li><a href="./research" class="active">Research</a></li>
-                <li><a href="./webapps">Webapps</a></li>
+                <li><a href="./education.html">Education</a></li>
+                <li><a href="./experience.html">Experience</a></li>
+                <li><a href="./award.html">Awards</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./research.html" class="active">Research</a></li>
+                <li><a href="./webapps.html">Webapps</a></li>
             </ul>
         </nav>
 
@@ -24,69 +27,165 @@
         <section class="research">
             <h2>Research Interests</h2>
             <div class="research-details">
-                Meta-analysis • Biostatistics • Bayesian Statistics • Econometrics • Machine learning
+                <span data-chips=",">Genomic Statistical Analysis, Biostatistics, Bayesian Statistics, Hybrid Machine Learning, Count Data Modeling, Meta-analysis</span>
             </div>
 
-            <h2>Research Project & Thesis</h2>
+            <h2> Software Skills </h2>
             <div class="research-details">
-                <h3>Prevalence and Seroprevalence of Dengue Infection: A Meta-analysis</h3>
-                <p><strong>July, 2023 - Present</strong></p>
-                Please contact for details.
-            </div>
-            <div class="research-details">
-                <h3>Influence of Social Factors on Perceptions of Climate Knowledge: A Case Study of
-                    Khulna City Corporation, Bangladesh</h3>
-                <p><strong>August, 2022 - January, 2023</strong></p>
-                Climate change has emerged as a critical global issue, necessitating concerted efforts from 
-                policymakers to establish climate justice and foster green development. Bangladesh, 
-                positioned in the global south, stands as one of the most vulnerable countries to climate 
-                change impacts. Understanding community perceptions and knowledge regarding climate-related 
-                issues is essential for effective mitigation and adaptation strategies. However , 
-                comprehensive studies addressing these aspects are yet lacking from this country. 
-                This study, therefore, focuses on Khulna City Corporation in Bangladesh, one of the worst 
-                victims of climate change impacts, to assess the populace's level of basic climate change 
-                knowledge and their awareness of initiatives undertaken by stakeholders. Furthermore, it 
-                examines how social factors such as gender, age, religion, profession, and location shape 
-                individuals' perceptions of climate change. The study also explores how governmental 
-                organizations (GOs), non-governmental organizations (NGOs), and international non-governmental
-                organizations (INGOs) could utilize this information to achieve climate justice in 
-                Bangladesh. This study shows that many residents in the Khulna City Corporation lack basic
-                understanding of climate change causes and solutions. Additionally, they are not concerned
-                with any activities taken by different groups to address this issue.
-            </div>
-            <div class="research-details">
-                <h3>The causes and Consequences of Road Accident in Bangladesh</h3>
-                <p><strong>April, 2022 - January, 2023</strong></p>
-                One of Bangladesh’s biggest issues right now is road accidents. It is the cause of many 
-                fatalities and injuries that negatively impact human life. The main objective of this 
-                research is to identify the reasons behind the increasing road accidents in Bangladesh. 
-                In this research, data on road accidents for the years 2006 to 2020 in Bangladesh were 
-                collected by reading daily newspapers. The technique of generalized linear models (GLMs) 
-                were used in this study. Because of the Poisson regression model’s overdispersion, a 
-                Negative Binomial regression model was applied for the purpose of the best-suited model. 
-                This study has found that the number of road accidents in Bangladesh was increasing and 
-                that the majority of them occurred during the winter and rainy seasons. A driver’s careless 
-                driving of the vehicle accounts for 62.117% of all road accident causes, whereas loss of 
-                control of the vehicle was responsible for 20.82% of all accidents. It was found in this 
-                study that the majority of accidents took place in divisional and highly populated cities, 
-                with Dhaka having the highest frequency. On the basis of correlation and regression analysis, 
-                it was determined that population growth is the root cause of road accidents. Population 
-                growth could explain the 31.42% variation in the number of road accidents. The causes of 
-                road accidents were found to have a to have a significant effect on road accidents on the
-                basis of the Poisson regression model. As there exists overdispersion in the Poisson 
-                regression model, a Negative Binomial regression model has been found to be the best-suited
-                technique for modeling causes of road accidents.
+                <span data-chips=",">R, Python, STATA, SPSS, LaTeX, SQL</span>
             </div>
 
-            <h2>Publications</h2>
-            <div class="research-details">
-                Ahsan, J., <a href="https://www.researchgate.net/profile/Sourav-Roy-32">Roy, S.</a>, & Huq, A. S. (2021). An In-depth Estimation of Road Traffic Accident Cost in Bangladesh,
-                <i>International Conference on Sustainable Development in Technology for 4th Industrial Revolution 2021</i>, 2021, 12–13.
+            <!-- Publications: each item is a .pub with data-type (journal | conference | poster) and data-year.
+                 The badges and "Copy citation" button are added automatically. -->
+            <div class="toolbar">
+                <input type="search" id="pub-search" placeholder="Search publications (title, author, venue)…" aria-label="Search publications">
+                <button type="button" class="filter-btn active" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="journal">Journal</button>
+                <button type="button" class="filter-btn" data-filter="conference">Conference</button>
+                <button type="button" class="filter-btn" data-filter="poster">Poster</button>
             </div>
-            
-            <h2>Work in Progress</h2>
-            One article have submitted to a journal; preparing another manuscript for imminent submission.
-            </section>
+
+            <div class="pub-group">
+            <h2> Journal Publications </h2>
+            <div class="research-details">
+
+                <div class="pub" data-type="journal" data-year="2026"><div class="cite">
+                Sultana N, Tanha A F, <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Tariqujjaman M, and Hossain M B.
+                Understanding Hygiene Knowledge and Practices among Urban Slum Women in Dhaka, Bangladesh: Insights from a Cross-Sectional Study.
+                <i> Journal of Water, Sanitation and Hygiene for Development </i>, 2026, 16(5), 438-452.
+                </div></div>
+
+                <div class="pub" data-type="journal" data-year="2026"><div class="cite">
+                Islam R B, Noor S T A, Mostarin S, <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Hossain L, Ahmed A, and Sayeed A.
+                Prevalence and Determinants of Premature or Early Menopause: A Pooled Analysis of 716,648 Women from 44 Low- and Middle-Income Countries.
+                <i> BMJ Global Health </i> 2026;11:e023742. doi: 10.1136/bmjgh-2026-023742.
+                </div></div>
+
+                <div class="pub" data-type="journal" data-year="2026"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Hossain M I, and Hossain M B.
+                Prevalence of Severe Dengue Infection in Bangladesh: A Bayesian Meta-analysis.
+                <i> Dhaka University Journal of Science </i>, 74(2), 301-310. doi: https://doi.org/10.3329/dujs.v74i2.85828.
+                </div></div>
+
+                <div class="pub" data-type="journal" data-year="2026"><div class="cite">
+                Tariqujjaman M, Sarmin M, Sultana N, Tanha AF, Rahman M, Haque MA,
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>,
+                Sultana T, Hasan MM, Mahfuz M, and Ahmed T. Trends of double burden of malnutrition among
+                ever-married adolescent girls and its association with caesarian section delivery: multi-level
+                modelling from Bangladesh Demographic and Health Surveys from 2004 to 2022.
+                <i> Journal of Global Health </i>. 2026. In press (Accepted: July 17, 2026).
+                </div></div>
+
+            </div>
+            </div>
+
+            <div class="pub-group">
+            <h2> Conference Presentations </h2>
+            <div class="research-details">
+
+                <div class="pub" data-type="conference" data-year="2025"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, and Hossain M I.
+                Sex-Specific Determinants of Non-Communicable Diseases among Respondents from Wealthier Households in Bangladesh.
+                <i> 19th National Statistical Conference, 2025, Bangladesh Statistical Association </i>, page 52.
+                </div></div>
+
+                <div class="pub" data-type="conference" data-year="2025"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, and Hossain M I.
+                Evaluating the Performance of Machine Learning Algorithms to Predict Cesarean Deliveries among Reproductive-Age Women in Bangladesh.
+                <i> 19th National Statistical Conference, 2025, Bangladesh Statistical Association </i>, page 31.
+                </div></div>
+
+                <div class="pub" data-type="conference" data-year="2025"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Hossain M B, and Hossain M I.
+                Bayesian Meta-analysis to Estimate the Prevalence of Severe Dengue in Bangladesh.
+                <i> 19th National Statistical Conference, 2025, Bangladesh Statistical Association </i>, page 16-17.
+                </div></div>
+
+                <div class="pub" data-type="conference" data-year="2021"><div class="cite">
+                Ahsan J, <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, and Huq A S (2021).
+                An In-depth Estimation of Road Traffic Accident Cost in Bangladesh.
+                <i>International Conference on Sustainable Development in Technology for 4th Industrial Revolution 2021</i>, 2021, page 12–13.
+                </div></div>
+
+            </div>
+            </div>
+
+            <div class="pub-group">
+            <h2> Poster Presentations </h2>
+            <div class="research-details">
+
+                <div class="pub" data-type="poster" data-year="2025"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Akter S, Hossain M I, Roy S C, Das B R, and Tariqujjaman M.
+                Trends, and Correlates of Non-communicable Diseases among Bangladeshi Adults: Evidence from the Bangladesh Demographic and Health Survey, 2011 to 2022.
+                <i> International Conference on Applied Statistics and Data Science 2025 </i>, 3, page 262.
+                </div></div>
+
+                <div class="pub" data-type="poster" data-year="2025"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Tariqujjaman M, Rana M T, Biswas M, and Das N C.
+                Predicting Cesarean Section Deliveries Using Hybrid Machine Learning Models: Evidence from the Bangladesh Demographic and Health Survey 2022.
+                <i> International Conference on Applied Statistics and Data Science 2025 </i>, 3, page 187.
+                </div></div>
+
+                <div class="pub" data-type="poster" data-year="2025"><div class="cite">
+                <a href="https://www.researchgate.net/profile/Sourav-Roy-32" target="_blank">Roy S</a>, Puja S B, Abdullah M A, Saha L, Roy S C, Dey K S, and Hossain M B.
+                Identifying Determinants of Road Accidents in Bangladesh Using Count Regression Models.
+                <i> International Conference on Applied Statistics and Data Science </i>, 3, page 308.
+                </div></div>
+
+            </div>
+            </div>
+
+            <p class="no-results">No publications match your search.</p>
+
+            <h2>Research Projects &amp; Thesis</h2>
+            <details class="project" open>
+                <summary>
+                    <h3> Parametric and Semi-parametric Regression Approaches for Modeling Functional Difficulties among Children aged 5-17 years in Bangladesh </h3>
+                    <p><strong> January, 2026 - June, 2026 </strong></p>
+                </summary>
+                <div class="project-body">
+                I worked as Research Assistant in this project under the supervision of Professor Anamul Haque Sajib. My role was variable extraction,
+                statistical modeling, and report writing. The findings of this research currently under review in a reputed journal.
+                </div>
+            </details>
+
+            <details class="project">
+                <summary>
+                    <h3> The Maternal and Infant Nutrition and Growth: Experiences from Bangladesh </h3>
+                    <p><strong> February, 2025 - December, 2025 </strong></p>
+                </summary>
+                <div class="project-body">
+                I worked as a Research Assistant in this project at the Internation Center for Diarrhoeal Disease Research, Bangladesh. My
+                role was title and abstract screening, data extraction from the selected papers, and report writing.
+                </div>
+            </details>
+
+            <details class="project">
+                <summary>
+                    <h3> Prevalence and Seroprevalence of Dengue Infection in Bangladesh: A Meta-analysis </h3>
+                    <p><strong> July, 2023 - October, 2024 </strong></p>
+                </summary>
+                <div class="project-body">
+                This research was part of my Master's program at the University of Dhaka, and I completed it under the supervision of Professor
+                Dr. Md Belal Hossain. A part of this research currently under review in a reputed journal, and another part published in
+                the Dhaka University Journal of Science. This research received National Science and Technology Fellowship 2023 from the Ministry
+                of Science and Technology of the Government of the People's Republic of Bangladesh.
+                </div>
+            </details>
+
+            <details class="project">
+                <summary>
+                    <h3>The Causes and Consequences of Road Accident in Bangladesh</h3>
+                    <p><strong>April, 2022 - January, 2023</strong></p>
+                </summary>
+                <div class="project-body">
+                I led this research project during my Bachelor's at the University of Dhaka. I mentored three of my peers in data cleaning,
+                data analysis, and report writing under the supervision of Professor Dr. Md Belal Hossain. The abstract of this research
+                placed in the Top Ten Poster Award in the International Conference on Applied Statistics and Data Science 2025.
+                </div>
+            </details>
+
     </main>
+    <script src="interactive.js"></script>
 </body>
 </html>
