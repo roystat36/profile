@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience | Roy</title>
     <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="interactive.css">
     <link rel="icon" href="cv.png" type="image">
+    <script>try{document.documentElement.dataset.theme=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){}</script>
 </head>
-<body>
+<body class="page-experience">
         <nav>
             <ul class="menu">
                 <li><a href="./">Sourav Roy</a></li>
                 <li><a href="./">About</a></li>
-                <li><a href="./education">Education</a></li>
+                <li><a href="./education.html">Education</a></li>
                 <li><a href="#" class="active">Experience</a></li>
-                <li><a href="./award">Awards</a></li>
-                <li><a href="./research">Research</a></li>
-                <li><a href="./webapps">Webapps</a></li>
+                <li><a href="./award.html">Awards</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./research.html">Research</a></li>
+                <li><a href="./webapps.html">Webapps</a></li>
             </ul>
         </nav>
 
@@ -24,10 +27,44 @@
         <section class="experience">
             <h2>Experience</h2>
             <div class="experience-details">
-                <ul>
+                <ul class="timeline">
                     <li>
-                        <h3>SPSS Instructor | Dhaka University Research Society</h3>
-                <p><strong>Feb, 2023 - Jun, 2023</strong> | Dhaka, Bangladesh</p>
+                        <h3> Graduate Research Assistant | Department of Nutrition and Health Science, Ball State University, United States of America <span class="current-badge">Current</span></h3>
+                <p><strong> August, 2026 - Current </strong> | Indiana, United States of America </p>
+                My current research involves the application of statistical methods on the Irritable Bowel Syndrom and mortality among US adults. Application
+                of the statistical methods on the genomic data consistently improving knowledge and skills on statistical genomics.
+                    </li>
+                    
+                    <li>
+                        <h3> Research Assistant | Department of Statistics, University of Dhaka, Bangladesh </h3>
+                <p><strong> Jan - Jun, 2026 </strong> | Dhaka, Bangladesh</p>
+                Conducted statistical analyses, prepared project report, and contributed to scientific manuscript preparation for publications.
+                    </li>
+
+                    <li>
+                        <h3> Senior Research Officer | Mitra and Associates </h3>
+                <p><strong> Jan - Jul, 2026 </strong> | Dhaka, Bangladesh</p>
+                Design sampling strategies, estimate minimum required sample size, and calculate sampling weights for survey research.
+                    </li>
+
+                    <li>
+                        <h3> Research Assistant | International Centre for Diarrhoeal Disease Research, Bangladesh (icddr,b) </h3>
+                <p><strong> Feb - Dec, 2025</strong> | Dhaka, Bangladesh</p>
+                Worked on a research project under the Maternal and Child Nutrition department of the Nutrition Research Division of icddr,b. I was also engaged with another research work focused on the application of machine learning techniques for diagnosing disease and nutritional status of children.
+                    </li>
+
+                    <li>
+                        <h3>General Secretary | Students' Association of Statistics, Jagannath Hall</h3>
+                <p><strong>Jul, 2023 - Mar, 2024</strong> | Dhaka, Bangladesh</p>
+                I led this reputed statistical organization of our hall at the University of Dhaka, 
+                organizing several programs such as providing scholarships to extraordinary students, 
+                arranging statistical competitions, hosting programming lecture series, and celebrating 
+                religious festivals.
+                    </li>
+
+                    <li>
+                        <h3> Course Teacher | Dhaka University Research Society</h3>
+                <p><strong> Feb, 2023 - Jun, 2025 </strong> | Dhaka, Bangladesh </p>
                 Taught data visualization, regression analysis, hypothesis testing and analysis of variance using SPSS.
                 Additionally, I prepared exam questions and evaluated the answer scripts.
                     </li>
@@ -54,6 +91,17 @@
                     </li>
                 </ul>
         </section>
+
+        <section class="experience">
+            <h2> Membership </h2>
+            <ul class="membership">
+                <li> Member <br> Dhaka University Research Society </li>
+                <li> Member <br> Qazi Motahar Hossain Statistics Club </li>
+                <li> Life Member <br> Bangladesh Statistical Association </li>
+                <li> Former General Secretary <br> Students' Association of Statistics </li>
+            </ul>
+        </section>
     </main>
+    <script src="interactive.js"></script>
 </body>
 </html>
