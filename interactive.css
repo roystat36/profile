@@ -559,6 +559,49 @@ html.lb-open, html.lb-open body { overflow: hidden; }
 
 .page-webapps .education-details { margin-bottom: 34px; }
 
+/* ---------- Statistical-notation background (stat-background.js) ---------- */
+.stat-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+.bg-toggle { font-family: 'Times New Roman', Times, serif; font-size: 19px; font-style: italic; }
+.bg-toggle.off { opacity: 0.45; text-decoration: line-through; }
+@media (max-width: 860px) {
+    .bg-toggle { margin-left: auto; }
+}
+
+/* Φ(z) reading-progress gauge */
+.phi-gauge {
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    z-index: 800;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 6px 8px 4px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(16px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.phi-gauge.show { opacity: 1; transform: none; pointer-events: auto; }
+.phi-gauge canvas { display: block; cursor: pointer; }
+.phi-label {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+}
+@media (max-width: 700px) { .phi-gauge { display: none; } }
+
 /* Component rules above redefine `transition`, which resets the delay; restore the stagger */
 html .reveal.reveal { transition-delay: var(--reveal-delay, 0s); }
 
